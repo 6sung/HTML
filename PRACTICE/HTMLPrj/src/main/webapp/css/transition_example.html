@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.box1{
+	width:100px; height:100px;
+	background-color:red;
+	transition-property:width;
+	transition-duration:2s;
+	transition-timing-function:ease-in-out;
+	transform:rotate(20deg) scale(0.8,0.5) skew(20deg,10deg);
+}
+.box2{
+	width:100px; height:100px;
+	background-color:black;
+	transition-property:width;
+	transition-duration:2s;
+	transition-timing-function: linear;
+}
+.box3{
+	width:100px; height:100px;
+	background-color:blue;
+	transition-property:width;
+	transition-duration:2s;
+	transition-timing-function:ease;
+}
+.box4{
+	width:100px; height:100px;
+	background-color:green;
+	transition-property:width;
+	transition-duration:2s;
+	transition-timing-function:ease-out;
+}
+
+.box1:hover{
+	width:400px;
+}
+.box2:hover{
+	width:400px;
+}
+.box3:hover{
+	width:400px;
+}
+.box4:hover{
+	width:400px;
+}
+</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+</body>
+</html>
