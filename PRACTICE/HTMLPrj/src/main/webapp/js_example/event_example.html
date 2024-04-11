@@ -23,10 +23,22 @@ btn2.onclick = function(event){
 <a href="https://javaspecialist.co.kr">자바전문가그룹</a>
 <script>
 var link = document.querySelector("a");
-link.onclick = function(event){
+var myHandler = function(event){
 	event.preventDefault();
 	alert("clicked");
 }
+link.addEventListener("click", myHandler);
+/*
+link.addEventListener("click",function(event){
+	event.preventDefault();
+	alert("clicked");
+})
+*/
+/*var link = document.querySelector("a");
+link.onclick = function(event){
+	event.preventDefault();
+	alert("clicked");
+}*/
 </script>
 </body>
 </html>
