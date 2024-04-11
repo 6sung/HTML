@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+<script>
+var data = 10;
+function calc(){
+	document.write(data);
+	var data=20;
+}
+calc();
+
+(function(){
+	document.write(data);
+	var data=20;
+	document.write(data);
+})();//자기 참조 호출 패턴, 함수의 이름이 없이 정의 후 바로 호출
+</script>
+</head>
+<body>
+
+</body>
+</html>

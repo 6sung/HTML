@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IF</title>
+<script type="text/javascript">
+var num = window.prompt("숫자를 입력하세요.");
+//if조건식은 반드시 true/false일 필요는 없다.
+//false로 판별되거나 true로 판별되는 식이 들어갈 수 있다.
+//false로 판별되는 경우 : false, null, undefined,"",0,0.0,NaN
+if(num!=null){
+	document.write(num);
+	console.log(num);
+	document.write("<p>");
+	document.write(typeof(num) + "<p>");
+	switch(parseInt(num)){
+	case 1:
+		document.write("1입니다");
+		break;
+	case 2:
+		document.write("2입니다");
+		break;
+	case 3:
+		document.write("3입니다");
+		break;
+	default:
+		document.write("값이 없습니다.");
+		break;
+	}
+	document.write("<p>");
+	
+	var score = parseInt(num);
+	switch(true){
+	case score>100:
+		document.write("true입니다. <p>");
+		break;
+	case score <=100:
+		document.write("false입니다. <p>");
+	}	
+}else{
+	document.write("아무것도 입력되지 않았습니다.");
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>
