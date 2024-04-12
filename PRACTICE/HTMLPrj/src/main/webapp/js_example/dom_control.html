@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DOM SAMPLE</h1>
+<input type="text"> <input type="button" value="입력"><br>
+<div id="result"></div>
+<div>글자수 : <span id="wordcount"></span></div>
+<script>
+var btn = document.querySelector("[type=button]");
+var input = document.querySelector("[type=text]");
+var result = document.querySelector("#result");
+var wordcount = document.querySelector("#wordcount");
+btn.onclick = function(event){
+	result.textContent = input.value;
+	input.value = "";
+}
+var count = 0;
+input.onkeyup = function(event){
+	wordcount.textContent = this.value.length;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>browser object model</title>
+</head>
+<body>
+<input type="button" id="open" value="https://javaspecialist.co.kr"><br>
+<input type="button" id="back" value="이전 페이지"><br>
+<input type="button" id="location" value="https://javaspecialist.co.kr"><br>
+<input type="button" id="navigator" value="브라우저 정보 보기"><br>
+<input type="button" id="screen" value="스크린 크기 정보 보기"><br>
+<div id="result"></div>
+<script>
+document.querySelector("#open").onclick = function(event){
+	window.open(this.value, "팝업창","width=500, height=500, menubar=no, status=nom toolbar=no");
+}
+document.querySelector("#back").onclick = function(event){
+	history.back(-1);
+}
+document.querySelector("#location").onclick = function(event){
+	location.href = this.value;
+}
+document.querySelector("#navigator").onclick = function(event){
+	document.querySelector("#result").textContent = navigator.appName;
+}
+document.querySelector("#screen").onclick = function(event){
+	var screenInfo = screen.width = ", " + screen.height + " : ";
+	screenInfo += screen.availWidth + ", " + screen.availHeight;
+	document.querySelector("#result").textContent = screenInfo;
+}
+</script>
+</body>
+</html>
