@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+//pure js code
+window.onload = function(){
+	let el = document.querySelector("#content");
+	console.log(el.textContent);
+	el.onclick = function(){
+		el.textContent = "World";
+		alert(el.textContent);
+		el.style.backgroundColor = "red";
+		el.style.color="yellow";
+		el.style.border="3px solid black";
+	}
+}
+// jquery code
+$(function(){
+	let el = $("#content1");
+	console.log(el.text());
+	/* el.click(function(){
+		alert(el.text());
+	}) */
+	el.click(function(){
+		el.text("bye");
+		alert(el.text());
+		el.css("background-color", "blue");
+		el.css("color","white");
+		el.css("border","3px solid black");
+	})
+})
+</script>
+</head>
+<body>
+<div id="content">Hello</div>
+<div id="content1">Good</div>
+</body>
+</html>
